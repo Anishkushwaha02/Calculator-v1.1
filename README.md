@@ -16,11 +16,11 @@ Designed for mobile with *large buttons & clean UI*.
 ## ⚙ Installation
 ```bash
 # Clone the repo
-git clone https://github.com/Anishkushwaha02/Scientific-Calculator v1.1.git
-cd Scientific-Calculator
+#git clone #https://github.com/Anishkushwaha02/Sc#ientific-Calculator v1.1.git
+#cd Scientific-Calculator
 
 # Install requirements
-pip install kivy
+# pip install kivy
 
 
 import os
