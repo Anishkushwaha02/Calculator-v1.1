@@ -22,7 +22,6 @@ Designed for mobile with *large buttons & clean UI*.
 # Install requirements
 # pip install kivy
 
-
 import os
 from kivy.config import Config
 
@@ -52,13 +51,13 @@ import math
 # 🚀 Scientific Calculator
 # -------------------------------
 class Calculator(GridLayout):
-    def init(self, **kwargs):
-        super().init(**kwargs)
+    def _init_(self, **kwargs):
+        super()._init_(**kwargs)
         self.cols = 1
 
         # 🔹 Creator Details
         self.add_widget(Label(
-            text="Calculator v1.1\n*\n[] Creator : Anish Kushwaha\n[*] Email : Anish_Kushwaha@proton.me",
+            text="Scientific Calculator\n*\n[] Creator : Anish Kushwaha\n[*] Email : Anish_Kushwaha@proton.me",
             font_size=20, 
             halign="center",
             valign="middle",
@@ -111,7 +110,7 @@ class Calculator(GridLayout):
         elif text == "=":
             try:
                 expr = self.display.text.replace("^", "")
-                self.display.text = str(eval(expr, {"builtins": None}, math.dict))
+                self.display.text = str(eval(expr, {"_builtins": None}, math.dict_))
             except Exception:
                 self.display.text = "Error"
         else:
@@ -129,5 +128,6 @@ class CalculatorApp(App):
 # -------------------------------
 # Run App
 # -------------------------------
-if name == "main":
+if _name_ == "_main_":
     CalculatorApp().run()
+
