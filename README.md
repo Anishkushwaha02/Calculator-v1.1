@@ -52,8 +52,8 @@ import math
 # 🚀 Scientific Calculator
 # -------------------------------
 class Calculator(GridLayout):
-    def _init_(self, **kwargs):
-        super()._init_(**kwargs)
+    def init(self, **kwargs):
+        super().init(**kwargs)
         self.cols = 1
 
         # 🔹 Creator Details
@@ -111,7 +111,7 @@ class Calculator(GridLayout):
         elif text == "=":
             try:
                 expr = self.display.text.replace("^", "")
-                self.display.text = str(eval(expr, {"_builtins": None}, math.dict_))
+                self.display.text = str(eval(expr, {"builtins": None}, math.dict))
             except Exception:
                 self.display.text = "Error"
         else:
@@ -129,5 +129,5 @@ class CalculatorApp(App):
 # -------------------------------
 # Run App
 # -------------------------------
-if _name_ == "_main_":
+if name == "main":
     CalculatorApp().run()
